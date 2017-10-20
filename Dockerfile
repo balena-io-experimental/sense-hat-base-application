@@ -1,4 +1,4 @@
-FROM resin/raspberrypi3-node:slim
+FROM resin/raspberrypi3-node
 
 # Move into a working directory
 WORKDIR /usr/src/app
