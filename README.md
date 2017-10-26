@@ -16,16 +16,16 @@ If you haven't cloned this git repository (i.e. you're reading these instruction
 git clone https://github.com/resin-io-projects/sense-hat-base-application
 ```
 
-Once the repo is cloned, you’ll change directory into the newly created *sense-hat-base-application* directory and connect your local copy of the application to resin by running the command shown in the top-right corner of your application page. (Be sure to copy the `git remote add` line from the top right corner of your application page rather than from here -- it will include your username and application name!)
+Once the repo is cloned, you’ll change directory into the newly created *sense-hat-base-application* directory:
 
 ```
 cd sense-hat-base-application
 ```
 
+Next you'll connect your local copy of the application to resin by running the command shown in the top-right corner of your application page. You can use the clipboard button to copy this line from the resin.io dashboard page.  (Be sure to copy the `git remote add` line from the top right corner of your application page rather than from here -- it will include your username and application name!)
 ![resin.io dashboard](https://user-images.githubusercontent.com/3144447/31838605-8c47e538-b5ab-11e7-9475-aee6978a1776.png)
 
-You can use the clipboard button to copy this line all at once. 
-
+It looks like this:
 ```
 git remote add resin <USERNAME>@git.resin.io:<USERNAME>/<APPNAME>.git
 ```
