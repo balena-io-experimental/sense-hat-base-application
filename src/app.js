@@ -1,7 +1,7 @@
 // This file is meant to be used as a starting point for a sense-hat application
 // using node-sense-hat. It first sets up a ball to be drawn, at a specific
 // position with a specific color.
-// A function to draw the said ball is the created, and also setup to be called
+// A function to draw the said ball is then created, and also setup to be called
 // once every 50ms.
 // We then register for events on the joystick, and use the information passed
 // into the event handlers to move the ball in the same direction that the
@@ -43,65 +43,65 @@ setInterval(drawBall, interval);
 // joystick on the sense-hat, which is a way to receive events when the
 // joystick is used
 JoystickLib.getJoystick()
-	.then(function(joystick) {
-		// The joystick handle is defined inside of this function
+.then(function(joystick) {
+	// The joystick handle is defined inside of this function
 
-		// Given a direction, return the vector of change that this direction
-		// corresponds to
-		function directionToVector(direction) {
-			switch(direction) {
-				case 'up':
-					return { x: 0, y: -1 };
-				case 'down':
-					return { x: 0, y: 1 };
-				case 'left':
-					return { x: -1, y: 0 };
-				case 'right':
-					return { x: 1, y: 0 };
-			}
+	// Given a direction, return the vector of change that this direction
+	// corresponds to
+	function directionToVector(direction) {
+		switch(direction) {
+			case 'up':
+				return { x: 0, y: -1 };
+			case 'down':
+				return { x: 0, y: 1 };
+			case 'left':
+				return { x: -1, y: 0 };
+			case 'right':
+				return { x: 1, y: 0 };
+		}
+	}
+
+	// Let's register for some events
+
+	// When the joystick is pressed, the below function will execute,
+	// with the direction variable being one of 'up', 'down', 'left' or 'right'
+	joystick.on('press', function(direction) {
+		console.log('The joystick was pressed ' + direction);
+
+		// Set the ball back to its original position on click
+		if (direction == 'click') {
+			ball.x = 0;
+			ball.y = 0;
+			return;
 		}
 
-		// Let's register for some events
-
-		// When the joystick is pressed, the below function will execute,
-		// with the direction variable being one of 'up', 'down', 'left' or 'right'
-		joystick.on('press', function(direction) {
-			console.log('The joystick was pressed ' + direction);
-
-			// Set the ball back to its original position on click
-			if (direction == 'click') {
-				ball.x = 0;
-				ball.y = 0;
-				return;
-			}
-
-			// Let's move the ball in the correct direction
-			vector = directionToVector(direction);
-			ball.x += vector.x;
-			ball.y += vector.y;
-		});
-
-		// When the joystick is held, the below function will execute,
-		// with the direction variable being one of 'up', 'down', 'left' or 'right'
-		joystick.on('hold', function(direction) {
-			console.log('The joystick is being held ' + direction);
-
-			// Set the ball back to its original position on click
-			if (direction == 'click') {
-				ball.x = 0;
-				ball.y = 0;
-				return;
-			}
-			// Let's move the ball in the correct direction
-			vector = directionToVector(direction);
-			ball.x += vector.x;
-			ball.y += vector.y;
-		});
-
-		// When the joystick is released, the below function will execute,
-		// with the direction variable being one of 'up', 'down', 'left' or 'right'
-		joystick.on('release', function(direction) {
-			console.log('The joystick was released from ' + direction);
-			// We don't need to move the ball when the direction is released
-		});
+		// Let's move the ball in the correct direction
+		vector = directionToVector(direction);
+		ball.x += vector.x;
+		ball.y += vector.y;
 	});
+
+	// When the joystick is held, the below function will execute,
+	// with the direction variable being one of 'up', 'down', 'left' or 'right'
+	joystick.on('hold', function(direction) {
+		console.log('The joystick is being held ' + direction);
+
+		// Set the ball back to its original position on click
+		if (direction == 'click') {
+			ball.x = 0;
+			ball.y = 0;
+			return;
+		}
+		// Let's move the ball in the correct direction
+		vector = directionToVector(direction);
+		ball.x += vector.x;
+		ball.y += vector.y;
+	});
+
+	// When the joystick is released, the below function will execute,
+	// with the direction variable being one of 'up', 'down', 'left' or 'right'
+	joystick.on('release', function(direction) {
+		console.log('The joystick was released from ' + direction);
+		// We don't need to move the ball when the direction is released
+	});
+});
