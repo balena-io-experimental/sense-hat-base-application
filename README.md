@@ -38,6 +38,13 @@ Now to deploy this code to all device(s) in the application just run the command
 git push resin master
 ```
 
+You may see a warning that says
+>The authenticity of host ‘git.resin.io (54.165.162.194)’ can’t be established.
+ECDSA key fingerprint is SHA256:NfwmqnKId5cx1RWpebbEuuM87bCJbdyhzRnqFES9Nnw.
+Are you sure you want to continue connecting (yes/no)?
+
+Type `yes` and hit return to accept. Your machine is asking you to verify the SSH host. You should only see this the first time you connect to resin.
+
 It should only take about two minutes to build your code (and subsequent builds will be quicker because of caching). You'll know your code has been successfully compiled and built when our friendly unicorn mascot appears in your terminal:
 
 ![unicorn](https://user-images.githubusercontent.com/3144447/31838641-b8fca76c-b5ab-11e7-92ee-dd49a0652bac.png)
