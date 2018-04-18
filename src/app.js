@@ -6,6 +6,11 @@
 // We then register for events on the joystick, and use the information passed
 // into the event handlers to move the ball in the same direction that the
 // joystick is pressed.
+
+// For more information about the APIs, see:
+//  * https://github.com/resin-io-playground/node-sense-hat
+//  * https://github.com/aonghusonia/sense-hat-led
+//  * https://github.com/resin-io-playground/sense-joystick
 SenseHat = require('node-sense-hat');
 
 // Let's pull out the joystick library
