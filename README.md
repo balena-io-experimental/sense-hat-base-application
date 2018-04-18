@@ -55,7 +55,11 @@ Your application will now be downloaded and executed by the device you have conn
 
 You’ll know the code is deployed when the device changes from "Downloading" to "Online" in the dashboard, and you’ll know it’s running on the device when one of the LEDs on the Sense HAT lights up. You'll be able to move the light with the Sense HAT joystick.
 
+A great next step is to make small changes to the existing code, like changing the lit LED from red to green. There is some helpful documentation in the comments of the app.js file to get you oriented.
+
 ### Ready to go beyond a single lit LED?
-The Sense HAT measures temperature, humidity, pressure, and orientation, which you can show on the LED matrix. You can find more ideas of what to do with the HAT in [this library](https://github.com/resin-io-playground/node-sense-hat).
+The Sense HAT measures temperature, humidity, pressure, and orientation, which you can show on the LED matrix. 
+
+You can find more ideas of what to do with the HAT in [this library](https://github.com/resin-io-playground/node-sense-hat).
 
 You can also use the Sense HAT in other languages, such as [Python](http://pythonhosted.org/sense-hat/).
