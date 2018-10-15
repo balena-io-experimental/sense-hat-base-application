@@ -1,14 +1,14 @@
 Using the Sense HAT with balena
 ===============================
 
-Start by downloading [Etcher](https://etcher.io).  You will use Etcher to write balenaOS to an SD card to boot your Raspberry Pi.
+Start by downloading [Etcher](https://balena.io/etcher).  You will use Etcher to write balenaOS to an SD card to boot your Raspberry Pi.
 
-You will follow the [getting started guide](https://docs.balena.io/raspberrypi3/nodejs/getting-started/) for the beginning of this project up through the "Deploying code" section.  Specifically,
-- [set up an SSH key](https://docs.balena.io/raspberrypi3/nodejs/getting-started/#adding-an-ssh-key)
-- [create an application](https://docs.balena.io/raspberrypi3/nodejs/getting-started/#creating-an-application)
-- [Add your first device](https://docs.balena.io/raspberrypi3/nodejs/getting-started/#adding-your-first-device) (download balenaOS)
-- using Etcher, [create a bootable SD card](https://docs.balena.io/raspberrypi3/nodejs/getting-started/#create-a-bootable-sd-card)
-- [set up your device](https://docs.balena.io/raspberrypi3/nodejs/getting-started/#setting-up-your-device)
+You will follow the [getting started guide](https://balena.io/docs/learn/getting-started/raspberrypi3/nodejs/) for the beginning of this project up through the "Deploying code" section.  Specifically,
+- [set up an SSH key](https://balena.io/docs/learn/getting-started/raspberrypi3/nodejs/#adding-an-ssh-key)
+- [create an application](https://balena.io/docs/learn/getting-started/raspberrypi3/nodejs/#creating-an-application)
+- [Add your first device](https://balena.io/docs/learn/getting-started/raspberrypi3/nodejs/#adding-your-first-device) (download balenaOS)
+- using Etcher, [create a bootable SD card](https://balena.io/docs/learn/getting-started/raspberrypi3/nodejs/#create-a-bootable-sd-card)
+- [set up your device](https://balena.io/docs/learn/getting-started/raspberrypi3/nodejs/#setting-up-your-device)
 
 If you haven't cloned this git repository (i.e. you're reading these instructions on GitHub), do that now by typing this into a terminal:
 
@@ -27,7 +27,7 @@ Next you'll connect your local copy of the application to balena by running the 
 
 It looks like this:
 ```
-git remote add balena <USERNAME>@git.balena.io:<USERNAME>/<APPNAME>.git
+git remote add balena <USERNAME>@git.balena-cloud.com:<USERNAME>/<APPNAME>.git
 ```
 
 So now you have set up a reference in your local git repository (the one on your development computer) to the balena application remote repository. So when you push new changes to this remote repository it will get compiled and built on the balena servers and deployed to every device in the application fleet.
@@ -39,7 +39,7 @@ git push balena master
 ```
 
 You may see a warning that says
->The authenticity of host ‘git.balena.io (54.165.162.194)’ can’t be established.
+>The authenticity of host ‘git.balena-cloud.com (54.165.162.194)’ can’t be established.
 ECDSA key fingerprint is SHA256:NfwmqnKId5cx1RWpebbEuuM87bCJbdyhzRnqFES9Nnw.
 Are you sure you want to continue connecting (yes/no)?
 
@@ -51,7 +51,7 @@ It should only take about two minutes to build your code (and subsequent builds 
 
 This means your code is safely built and stored on our image registry.
 
-Your application will now be downloaded and executed by the device you have connected in your application fleet. This may take a few minutes, and you can watch the status of the download in your application dashboard.  Optionally, you can speed this up for subsequent builds using balena's [container deltas](https://docs.balena.io/runtime/delta/) if you want!
+Your application will now be downloaded and executed by the device you have connected in your application fleet. This may take a few minutes, and you can watch the status of the download in your application dashboard.  Optionally, you can speed this up for subsequent builds using balena's [container deltas](https://balena.io/docs/learn/deploy/delta/) if you want!
 
 You’ll know the code is deployed when the device changes from "Downloading" to "Online" in the dashboard, and you’ll know it’s running on the device when one of the LEDs on the Sense HAT lights up. You'll be able to move the light with the Sense HAT joystick.
 
