@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/resin-io-projects/sense-hat-base-application.git"
+    "url": "git+https://github.com/balena-projects/sense-hat-base-application.git"
   },
   "author": "Cameron Diver <cameron@resin.io>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/resin-io-projects/sense-hat-base-application/issues"
+    "url": "https://github.com/balena-projects/sense-hat-base-application/issues"
   },
-  "homepage": "https://github.com/resin-io-projects/sense-hat-base-application#readme",
+  "homepage": "https://github.com/balena-projects/sense-hat-base-application#readme",
   "dependencies": {
     "node-sense-hat": "0.0.2"
   }
