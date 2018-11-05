@@ -13,7 +13,7 @@ You will follow the [getting started guide](https://balena.io/docs/learn/getting
 If you haven't cloned this git repository (i.e. you're reading these instructions on GitHub), do that now by typing this into a terminal:
 
 ```
-git clone https://github.com/balena-projects/sense-hat-base-application
+git clone https://github.com/balena-io-projects/sense-hat-base-application
 ```
 
 Once the repo is cloned, you’ll change directory into the newly created *sense-hat-base-application* directory:
@@ -56,6 +56,6 @@ Your application will now be downloaded and executed by the device you have conn
 You’ll know the code is deployed when the device changes from "Downloading" to "Online" in the dashboard, and you’ll know it’s running on the device when one of the LEDs on the Sense HAT lights up. You'll be able to move the light with the Sense HAT joystick.
 
 ### Ready to go beyond a single lit LED?
-The Sense HAT measures temperature, humidity, pressure, and orientation, which you can show on the LED matrix. You can find more ideas of what to do with the HAT in [this library](https://github.com/balena-playground/node-sense-hat).
+The Sense HAT measures temperature, humidity, pressure, and orientation, which you can show on the LED matrix. You can find more ideas of what to do with the HAT in [this library](https://github.com/balena-io-playground/node-sense-hat).
 
 You can also use the Sense HAT in other languages, such as [Python](http://pythonhosted.org/sense-hat/).
