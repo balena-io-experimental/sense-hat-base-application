@@ -1,4 +1,4 @@
-FROM resin/raspberrypi3-node:6.10.3
+FROM balenalib/%%BALENA_MACHINE_NAME%%-node:6.15.0-build
 
 # Move into a working directory
 WORKDIR /usr/src/app
