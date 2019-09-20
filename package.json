@@ -4,7 +4,7 @@
   "description": "A base application on which to start building your sense-hat project!",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\" && exit"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/balena-projects/sense-hat-base-application#readme",
   "dependencies": {
-    "node-sense-hat": "0.0.2"
+    "node-sense-hat": "github:balena-io-playground/node-sense-hat#5304b25c6d2d586378ba0f6aa5d768c929c80fde"
   }
 }
