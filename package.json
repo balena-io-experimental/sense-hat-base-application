@@ -1,6 +1,6 @@
 {
   "name": "sense-hat-base-application",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A base application on which to start building your sense-hat project!",
   "main": "src/app.js",
   "scripts": {
