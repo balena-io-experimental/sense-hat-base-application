@@ -66,7 +66,7 @@ The build will start running, and look something like this:
 
 This means your code is safely built and stored on our image registry.
 
-Your application will now be downloaded and executed by the device you have connected in your application fleet. This may take a few minutes, and you can watch the status of the download in your application dashboard.  Your balenaCloud dashboard should look a bit like this:
+Your container will now be downloaded and run by the device you have provisioned in your fleet. This may take a few minutes, and you can watch the status of the download on the device page of the dashboard. It should look a bit like this:
 ![balena dashboard](https://www.balena.io/docs/img/common/device/download-progress.png)
 
 You’ll know the code is deployed when the device changes from "Downloading" to "Online" in the dashboard, and you’ll know it’s running on the device when one of the LEDs on the Sense HAT lights up. You'll be able to move the light with the Sense HAT joystick.
